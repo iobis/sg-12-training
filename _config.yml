@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: Git training
 description: Git training
+mermaid: true
