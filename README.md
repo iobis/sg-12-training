@@ -72,23 +72,31 @@ nothing to commit, working tree clean
 ```
 
 ```mermaid
-gitGraph
-    commit id: "9ab80b0"
+flowchart RL
+    1((9ab80b0))
+    main(main) -.-> 1
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
 
 ```bash
 % touch test2.txt
 % git add test2.txt
 % git commit -m "added one more file"
-[main d2d0f24] added one more file
+[main(main) d2d0f24] added one more file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test2.txt
 ```
 
 ```mermaid
-gitGraph
-    commit id: "9ab80b0"
-    commit id: "d2d0f24"
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    2 --> 1
+    main(main) -.-> 2
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
 
 Check the commit history using `git log`.
@@ -121,10 +129,17 @@ Let's make one more change and add some text to `test.txt`:
 Our repository now looks like this:
 
 ```mermaid
-gitGraph
-    commit id: "9ab80b0"
-    commit id: "d2d0f24"
-    commit id: "370682a"
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    2 --> 1
+    3 --> 2
+    main(main) -.-> 3
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
 
 ### Branching
@@ -141,11 +156,19 @@ Switched to a new branch 'develop'
 ```
 
 ```mermaid
-gitGraph
-    commit id: "9ab80b0"
-    commit id: "d2d0f24"
-    commit id: "370682a"
-    branch develop    
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    2 --> 1
+    3 --> 2
+    main(main) -.-> 3
+    develop(develop) -.-> 3
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+    style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
 ```
 
 ### Merging branches
