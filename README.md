@@ -108,7 +108,45 @@ Date:   Fri Mar 8 19:15:05 2024 +0100
     first commit
 ```
 
+Let's make one more change and add some text to `test.txt`:
+
+```bash
+% echo "here's a line of text" >> test.txt
+% git add .
+% git commit -m "added some text"
+[main 370682a] added some text
+ 1 file changed, 1 insertion(+)
+```
+
+Our repository now looks like this:
+
+```mermaid
+gitGraph
+    commit id: "9ab80b0"
+    commit id: "d2d0f24"
+    commit id: "370682a"
+```
+
 ### Branching
+
+We will now create a new branch so we can commit changes without affecting the main branch. Once we are ready, we can merge the changes back into the main branch.
+
+A branch is really just a pointer to a commit. When we create a new branch, we create a pointer to the current commit.
+
+We can use `git branch` and `git checkout` to create and switch branches, but there is a shortcut: `git checkout -b`.
+
+```bash
+% git checkout -b develop
+Switched to a new branch 'develop'
+```
+
+```mermaid
+gitGraph
+    commit id: "9ab80b0"
+    commit id: "d2d0f24"
+    commit id: "370682a"
+    branch develop    
+```
 
 ### Merging branches
 
