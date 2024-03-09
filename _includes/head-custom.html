@@ -1,3 +1,8 @@
 <script type="module">
+var mermaidNodes = document.querySelectorAll('.language-mermaid');
+mermaidNodes.forEach(function(node) {
+    node.classList.add('mermaid');
+});
+
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 </script>
