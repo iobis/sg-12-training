@@ -1,5 +1,7 @@
 # Git training
 
+You can also read a distraction free version of this document [here](https://iobis.github.io/git-training/).
+
 ## What is git?
 
 ## What is GitHub?
