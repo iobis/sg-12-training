@@ -2,11 +2,7 @@
 
 ## What is git?
 
-## What is GitHub?
-
-## Using git
-
-### Initializing a repository
+## Initializing a repository
 
 ```bash
 % git init
@@ -22,7 +18,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-### Adding files
+## Adding files
 
 Files can be added to the index using `git add`.
 
@@ -54,7 +50,7 @@ Changes to be committed:
 	new file:   test.txt
 ```
 
-### Saving changes
+## Saving changes
 
 Staged changes can be committed using `git commit`.
 
@@ -142,7 +138,7 @@ flowchart RL
     style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
 
-### Branching
+## Branching
 
 We will now create a new branch so we can commit changes without affecting the main branch. Once we are ready, we can merge the changes back into the main branch.
 
@@ -171,16 +167,95 @@ flowchart RL
     style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
 ```
 
-### Merging branches
+If we now make more changes and commit them, the `develop` branch will move forward, but the `main` branch will stay where it is.
 
-## Using GitHub
+```bash
+% echo "here's a line of text" >> test2.txt
+% git add .
+% git commit -m "added text to test2.txt"
+[develop aac8ffc] added text to test2.txt
+ 1 file changed, 1 insertion(+)
+```
 
-### Creating a repository
+Now switch back to the `main` branch and make a change there.
 
-### Cloning a repository
+```bash
+% git checkout main
+Switched to branch 'main'
+% echo "here's another line of text" >> test.txt
+% git add .
+% git commit -m "changed the first file"
+[main 5d5cf50] changed the first file
+ 1 file changed, 1 insertion(+)
+```
 
-### Forking a repository
+```mermaid
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    4((aac8ffc))
+    5((5d5cf50))
+    2 --> 1
+    3 --> 2
+    4 --> 3
+    5 --> 3
+    main(main) -.-> 5
+    develop(develop) -.-> 4
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 4 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 5 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+    style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
+```
 
-### Pull requests
+## Merging branches
 
-### Issues
+`git merge` incorporates changes from another history into the current branch. The result is recorded in a new commit.
+
+```bash
+% git merge -m "merge branch develop" develop
+% git merge develop
+Merge made by the 'ort' strategy.
+ test2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+% git log
+commit 3d4cdcae41f1ff8ab7811db0a700fbc4876164ec (HEAD -> main)
+Merge: 5d5cf50 aac8ffc
+Author: Pieter Provoost <pieterprovoost@gmail.com>
+Date:   Wed Mar 13 14:53:57 2024 +0100
+
+    merge branch develop
+```
+
+```mermaid
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    4((aac8ffc))
+    5((5d5cf50))
+    6((0fa2c35))
+    2 --> 1
+    3 --> 2
+    4 --> 3
+    5 --> 3
+    6 --> 5
+    6 --> 4
+    main(main) -.-> 6
+    develop(develop) -.-> 4
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 4 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 5 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 6 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+    style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
+```
+
+## Working with remotes
+
+
