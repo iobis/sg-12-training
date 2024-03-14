@@ -2,6 +2,8 @@
 
 ## Authentication with GitHub
 
+![](images/jupyter_ssh.png)
+
 ## Cloning the dataset repository
 
 Open a new terminal in JupyterHub, navigate to the `work` folder, and clone your fork of the dataset repository. Make sure to change `<username>` in the command below to your own. After cloning, go into the dataset folder and create a new branch to work in.
@@ -26,6 +28,8 @@ Close the terminal, navigate to `sg-12-dataset/scripts`, and create a new R note
 An example solution is available at <https://github.com/pieterprovoost/sg-12-dataset>. If necessary, download the notebook from GitHub and upload it to your scripts folder.
 
 ## Pushing your work to GitHub
+
+![](images/jupyter_push.png)
 
 ```bash
 (base) jovyan@82065e7c143d:~/work/sg-12-dataset$ git add .
