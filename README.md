@@ -4,5 +4,8 @@ Read a distraction free version of this documentation [here](https://iobis.githu
 
 Throughout this training we will use an example eDNA dataset which is available at <https://github.com/iobis/sg-12-dataset>.
 
-- [Git](git.md)
-- [GitHub](github.md)
+- [Using git](git.md)
+- [Using GitHub](github.md)
+- [Using JupyterHub](jupyterhub.md)
+- [Processing an eDNA dataset](dataset.md)
+- [The DNADerivedData extension](dna.md)

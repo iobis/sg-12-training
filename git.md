@@ -258,4 +258,18 @@ flowchart RL
 
 ## Working with remotes
 
-
+```bash
+% git init --bare ../remote/.git
+Initialized empty Git repository in /Users/pieter/Desktop/remote/.git/
+% git remote add origin ../remote/.git
+% git push --set-upstream origin main
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 1.36 KiB | 1.36 MiB/s, done.
+Total 15 (delta 1), reused 0 (delta 0), pack-reused 0
+To ../remote/.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
