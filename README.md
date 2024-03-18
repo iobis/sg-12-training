@@ -1,17 +1,17 @@
 # OBIS-SG 12 training
 
-[!NOTE]
-Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/).
+> [!NOTE]
+> Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/).
 
 This is part of the training material for the nodes training at the 12th OBIS SG meeting, in which you will be introduced to the basics of using git, GitHub, JupyterHub, Darwin Core, and Darwin Core extensions. During the hands-on session you will quality control and publish an eDNA dataset as Darwin Core. You will use the command line as well as R programming, so if you are not comfortable with these try to team up with someone who is.
 
 ```mermaid
 flowchart LR
-    fork("fork dataset<br/>(GitHub)")
-    clone("clone dataset<br/>(JupyterHub)")
-    process("process dataset<br/>(JupyterHub)")
-    publish("upload dataset<br/>(GitHub)")
-    check("check dataset<br/>(BioCheck)")
+    fork("1. fork dataset<br/>(GitHub)")
+    clone("2. clone dataset<br/>(JupyterHub)")
+    process("3. process dataset<br/>(JupyterHub)")
+    publish("4. upload dataset<br/>(GitHub)")
+    check("5. check dataset<br/>(BioCheck)")
     fork --> clone
     clone --> process
     process --> publish
