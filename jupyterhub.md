@@ -1,5 +1,7 @@
 # JupyterHub
 
+JupyterHub is a multi-user server-hosted Jupyter notebook environment. The OBIS JupyterHub is hosted at <https://jupyter.obis.org>. After registration and approval by the administrators, you will be able to access the hub and create R and Python notebooks. Users also have access to example notebooks and datasets in a shared folder.
+
 ```mermaid
 flowchart LR
     Dockerfile.hub
@@ -29,3 +31,7 @@ flowchart LR
     style shared_folder fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
     style data_folder fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
+
+## Creating and running a notebook
+
+[to be added]
