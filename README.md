@@ -1,4 +1,4 @@
-# OBIS SG 12 training
+# OBIS SG 12 training :tropical_fish:
 
 > [!NOTE]  
 > Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/). if you encounter any issues with this documentation please create a ticket [here](https://github.com/iobis/sg-12-training/issues).
@@ -19,7 +19,11 @@ flowchart LR
 
 ```
 
+## Example dataset
+
 The example eDNA dataset is available at <https://github.com/iobis/sg-12-dataset>, and an example Jupyter Notebook solution to the data cleaning exercise is available at <https://github.com/pieterprovoost/sg-12-dataset/blob/develop/scripts/pieter.ipynb>. Note that this notebook does not render perfectly on GitHub, so you may want to upload it to your JupyterHub environment (but more on that later).
+
+## Contents
 
 - [Using git](git.md)
 - [Using GitHub](github.md)
