@@ -39,6 +39,8 @@ Close the terminal, navigate to `sg-12-dataset/scripts`, and create a new R note
 
 An example solution is available at <https://github.com/pieterprovoost/sg-12-dataset>. If necessary, download the notebook from GitHub and upload it to your scripts folder.
 
+To generate a Darwin Core Archive from Darwin Core data frames, you can use the <https://github.com/pieterprovoost/r-dwca-writer> package.
+
 ## Pushing your work to GitHub
 
 ![](images/jupyter_push.png)
