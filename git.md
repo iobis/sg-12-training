@@ -1,13 +1,26 @@
-# Git
+# Using git
 
 ## What is git?
 
+Git is a distributed version control system that is used to track changes in source code and other files during software development, making it a lot easier to collborate on a project with others. Git was created by Linus Torvalds to manage the development of the Linux operating system, but it has since become the de facto standard for version control in the software industry, and it is gaining traction in the scientific commmunity as well.
+
+Git keeps track of who changed what, when, and why, and it makes it possible to revert to a previous version of the project when necessary. It allows a team to work on different versions of the project at the same time, and to merge changes made by different people into a single version later.
+
+In the sections below we will go through the commands you will need most often. For a more comprehensive overview, see the [official documentation](https://git-scm.com/doc).
+
+![git](https://imgs.xkcd.com/comics/git.png)
+<https://xkcd.com/1597>
+
 ## Initializing a repository
+
+In git, projects are organized in repositories. A repository folder has a `.git` subfolder that contains the version history and configuration options. A new repository can be created using `git init`.
 
 ```bash
 % git init
 Initialized empty Git repository in /Users/pieter/Desktop/git/.git/
 ```
+
+Check the status of the repository using `git status`.
 
 ```bash
 % git status
@@ -20,7 +33,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 ## Adding files
 
-Files can be added to the index using `git add`.
+Files in your workspace are not tracked by git by default, and need be added to the git index using `git add`. First create a new file `test.txt` and then check the status of the repository.
 
 ```bash
 % git status
@@ -34,6 +47,8 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+Now add the new file to the index.
 
 ```bash
 % git add test.txt
@@ -258,9 +273,13 @@ flowchart RL
 
 ## Working with remotes
 
+A remote is a version of your repository that is hosted elsewhere, on the internet for example. By convention, the default remote is called `origin`. If you have a local repository, you can add a remote using `git remote add`. Note that the URL below is just an example.
+
 ```bash
 % git remote add origin https://remote-repo-url.git
 ```
+
+Now push your changes to the remote repository using `git push`. `--set-upstream` links your local `main` branch to `origin/main`.
 
 ```bash
 % git push --set-upstream origin main
@@ -274,6 +293,8 @@ To https://remote-repo-url.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+
+Now do the same for the `develop` branch.
 
 ```bash
 % git push --set-upstream origin develop
@@ -309,6 +330,8 @@ flowchart TB
     style 6 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
     style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
+    style local fill:#FAFAFA,stroke:#BBBBBB,stroke-width:1px
+    style remote fill:#FAFAFA,stroke:#BBBBBB,stroke-width:1px
     end
     subgraph remote ["remote (origin)"]
     direction RL
@@ -338,3 +361,5 @@ flowchart TB
     local -- push --> remote
     remote -- clone<br/>pull (fetch + merge) --> local
 ```
+
+Now continue with the [Using GitHub](github.md) section.

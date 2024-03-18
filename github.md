@@ -1,5 +1,7 @@
 # GitHub
 
+Before reading this section, familiarize yourself with [Using git](git.md).
+
 ## Using GitHub
 
 ![ipt](images/ipt.png)
