@@ -1,4 +1,4 @@
-# OBIS SG 12 training :tropical_fish:
+# OBIS SG 12 training 🐠
 
 > [!NOTE]  
 > Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/). if you encounter any issues with this documentation please create a ticket [here](https://github.com/iobis/sg-12-training/issues).
