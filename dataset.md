@@ -47,16 +47,24 @@ To generate a Darwin Core Archive from Darwin Core data frames, you can use the 
 
 ```bash
 (base) jovyan@82065e7c143d:~/work/sg-12-dataset$ git add .
+```
+
+```bash
 (base) jovyan@82065e7c143d:~/work/sg-12-dataset$ git commit -m "example solution"
 [develop 54b39e6] example solution
  1 file changed, 364 insertions(+)
  create mode 100644 scripts/pieter.ipynb
+```
+
+```bash
 (base) jovyan@82065e7c143d:~/work/sg-12-dataset$ git push
 fatal: The current branch develop has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin develop
+```
 
+```bash
 (base) jovyan@82065e7c143d:~/work/sg-12-dataset$ git push --set-upstream origin develop
 Enumerating objects: 6, done.
 Counting objects: 100% (6/6), done.
