@@ -58,3 +58,34 @@ A pull request is used to propose changes to an upstream repository. When you ma
 GitHub also provides issues tracking. Issues can be used to report bugs, request features, or discuss ideas. Issues can be assigned to users, labeled, and linked to pull requests.
 
 ![ipt](images/ipt_issues.png)
+
+## Authentication
+
+To be able to pull and push code from and to GitHub from your local machine, you need to authenticate yourself with GitHub. To do this, you will need to generate an SSH key pair, and upload the public key to GitHub. If you are working on the OBIS JupyterHub, the key pair will not be preserved across sessions, so you will need to store it in your work folder and configure git to use it.
+
+Run the following commands in a new terminal:
+
+```bash
+ssh-keygen -f ~/work/id_rsa
+cat ~/work/id_rsa.pub
+```
+
+This will print the public key to the terminal. Copy the key, go to GitHub, and add it to your SSH keys in your account settings.
+
+To configure git to use the key, run:
+
+```bash
+git config --local core.sshCommand "ssh -i ~/work/id_rsa"
+```
+
+Note that this only works when you are in an existing git directory. To use the new key to clone a repository, you can run:
+
+```bash
+GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone <repo-url>
+```
+
+Then in the repository directory, run the `git config` command above.
+
+![](images/jupyter_ssh_local.png)
+
+![](images/github_key.png)

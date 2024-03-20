@@ -2,19 +2,7 @@
 
 ## Authentication with GitHub
 
-To be able to pull and push code from and to GitHub, we need to authenticate ourselves with GitHub first. To do this, we will generaten an SSH key pair, set is as the key pair to be used by git, and upload the public key to GitHub. Run the following commands in a new terminal:
-
-```bash
-ssh-keygen -f ~/work/id_rsa
-git config core.sshCommand "ssh -i ~/work/id_rsa"
-cat ~/work/id_rsa.pub
-```
-
-This will print the public key to the terminal. Copy the key, go to GitHub, and add it to your SSH keys in your account settings.
-
-![](images/jupyter_ssh_local.png)
-
-![](images/github_key.png)
+See the section on [Authentication](github.md#authentication) in the GitHub documentation.
 
 ## Cloning the dataset repository
 
