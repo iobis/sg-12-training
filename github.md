@@ -72,6 +72,10 @@ cat ~/work/id_rsa.pub
 
 This will print the public key to the terminal. Copy the key, go to GitHub, and add it to your SSH keys in your account settings.
 
+![](images/jupyter_ssh_local.png)
+
+![](images/github_key.png)
+
 To configure git to use the key, run:
 
 ```bash
@@ -85,7 +89,3 @@ GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone <repo-url>
 ```
 
 Then in the repository directory, run the `git config` command above.
-
-![](images/jupyter_ssh_local.png)
-
-![](images/github_key.png)
