@@ -8,6 +8,7 @@ flowchart LR
     Dockerfile.obis-notebook
     shared_folder
     data_folder
+    scratch_folder
     subgraph hub
     hub_container
     end
@@ -24,12 +25,15 @@ flowchart LR
     hub_container-->container_user2
     data_folder-->container_user1
     data_folder-->container_user2
+    scratch_folder-->container_user1
+    scratch_folder-->container_user2
     shared_folder-->container_user1
     shared_folder-->container_user2
     style Dockerfile.hub fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style Dockerfile.obis-notebook fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style shared_folder fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
     style data_folder fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+    style scratch_folder fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
 
 ## Creating and running a notebook
