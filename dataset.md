@@ -4,13 +4,17 @@
 
 See the section on [Authentication](github.md#authentication) in the GitHub documentation.
 
+## Forking the dataset repository
+
+Go to the dataset repository at <https://github.com/iobis/sg-12-dataset> and clone the repository to your own GitHub account.
+
 ## Cloning the dataset repository
 
 Open a new terminal in JupyterHub, navigate to the `work` folder, and clone your fork of the dataset repository. Make sure to change `<username>` in the command below to your own. After cloning, go into the dataset folder and create a new branch to work in.
 
 ```bash
 cd work
-git clone git@github.com:<username>/sg-12-dataset.git
+GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone git@github.com:<username>/sg-12-dataset.git
 cd sg-12-dataset
 git checkout -b develop
 ```

@@ -3,7 +3,7 @@
 > [!NOTE]  
 > Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/). if you encounter any issues with this documentation please create a ticket [here](https://github.com/iobis/sg-12-training/issues).
 
-This is part of the training material for the nodes training at the 12th OBIS SG meeting, in which you will be introduced to the basics of using git, GitHub, JupyterHub, Darwin Core, and Darwin Core extensions. During the hands-on session you will quality control and publish an eDNA dataset as Darwin Core. You will use the command line as well as R programming, so if you are not comfortable with these try to team up with someone who is.
+This is part of the training material for the nodes training at the 12th OBIS SG meeting, in which you will be introduced to the basics of using git, GitHub, JupyterHub, Darwin Core, and Darwin Core extensions. During the hands-on session you will quality control and publish an eDNA dataset as Darwin Core in a reproducible way. You will use the command line as well as R programming, so if you are not comfortable with these try to team up with someone who is.
 
 ```mermaid
 flowchart LR
