@@ -89,3 +89,5 @@ GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone <repo-url>
 ```
 
 Then in the repository directory, run the `git config` command above.
+
+## Demo: contributing to the OBIS manual
