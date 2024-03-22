@@ -32,4 +32,8 @@ For the purposes of this training we will focus on Occurrence core + the extende
 
 Use the flow chart above to determine what kind dataset structure is best suited for each example:
 
-[in development]
+1. Individual whale sightings at sea
+2. eDNA samples from rocky intertidal with temperature and salinity measurements
+3. Harbour monitoring program collecting fish samples and water quality parameters
+4. Historical data on benthic invertebrates from 1800-2000
+5. Citizen science event where species along shoreline were recorded at several sites
