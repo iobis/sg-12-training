@@ -3,7 +3,9 @@
 > [!NOTE]  
 > Read a distraction free version of this documentation [here](https://iobis.github.io/sg-12-training/). if you encounter any issues with this documentation please create a ticket [here](https://github.com/iobis/sg-12-training/issues).
 
-This is part of the training material for the nodes training at the 12th OBIS SG meeting, in which you will be introduced to the basics of using git, GitHub, JupyterHub, Darwin Core, and Darwin Core extensions. During the hands-on session you will quality control and publish an eDNA dataset as Darwin Core in a reproducible way. You will use the command line as well as R programming, so if you are not comfortable with these try to team up with someone who is.
+This is part of the training material for the nodes training at the 12th OBIS SG meeting. The goal of this training session is to teach you how to use a number of tools which can help you manage, publish, and analyze your data more effectively, reproducibly, and collaboratively. These skills will also help you collaborate on code and documentation (including the OBIS manual).
+
+During the training you will be introduced to the basics of using git, GitHub, JupyterHub, Darwin Core, and Darwin Core extensions. During the hands-on session you will quality control and publish an eDNA dataset as Darwin Core in a reproducible way. You will use the command line as well as R programming, so if you are not comfortable with these try to team up with someone who is.
 
 ```mermaid
 flowchart LR
@@ -18,6 +20,33 @@ flowchart LR
     publish --> check
 
 ```
+
+## Agenda
+
+Monday 25 March 2024 (MABIK)
+
+| Time | Topic | |
+| -- | -- | -- |
+| 10:00-10:45 | Hands on sessions: Darwin Core | 0:45 |
+| 10:45-11:00 | Break | |
+| 11:00-11:30 | Hands-on sessions: JupyterHub and OBIS products platform | 0:30 |
+| 11:30-12:15 | Hands-on sessions: Git and GitHub | 0:45 |
+| 12:15-12:30 | Hands-on sessions: example dataset | 0:15 |
+| 12:30-13:30 | Lunch | |
+| 13:30-15:00 | Hands-on sessions: quality control | 1:30 |
+| 15:00-15:30 | Break | |
+| 15:30-16:00 | Hands-on sessions: MeasurementOrFacts extension and vocabularies (part 1) | 0:30 |
+
+Tuesday 26 March 2024 (MABIK)
+
+| Time | Topic | |
+| -- | -- | -- |
+| 09:00-09:30 | Hands-on sessions: MeasurementOrFacts extension and vocabularies (part 2) | 0:30 |
+| 09:30-09:45 | Hands-on sessions: DNADerivedData extension | 0:15 |
+| 09:45-10:30 | Hands-on sessions: quality control (continued) | 0:45 |
+| 10:30-11:00 | Break | |
+| 11:00-11:30 | Hands-on sessions: quality control (continued) | 0:30 |
+| 11:30-12:30 | OBIS annotated names tool (to be confirmed) | 1:00 |
 
 ## Example dataset
 
