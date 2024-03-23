@@ -86,6 +86,7 @@ nothing to commit, working tree clean
 flowchart RL
     1((9ab80b0))
     main(main) -.-> 1
+    head(HEAD) -.-> main
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
 ```
@@ -105,6 +106,7 @@ flowchart RL
     2((d2d0f24))
     2 --> 1
     main(main) -.-> 2
+    head(HEAD) -.-> main
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
@@ -147,10 +149,56 @@ flowchart RL
     2 --> 1
     3 --> 2
     main(main) -.-> 3
+    head(HEAD) -.-> main
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+```
+
+## Going back
+
+Return to a previous commit using `git checkout`:
+
+```bash
+% git checkout d2d0f24cab33f87126e3d0108c13a8a3f86f8da3
+Note: switching to 'd2d0f24cab33f87126e3d0108c13a8a3f86f8da3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+HEAD is now at d2d0f24 added one more file
+```
+
+```mermaid
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    2 --> 1
+    3 --> 2
+    main(main) -.-> 3
+    head(HEAD) -.-> 2
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+```
+
+```bash
+% git status
+HEAD detached at d2d0f24
+nothing to commit, working tree clean
+```
+
+Return to the main branch using:
+
+```bash
+% git checkout main
+Previous HEAD position was d2d0f24 added one more file
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
 ```
 
 ## Branching
@@ -175,6 +223,7 @@ flowchart RL
     3 --> 2
     main(main) -.-> 3
     develop(develop) -.-> 3
+    head(HEAD) -.-> develop
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
@@ -190,6 +239,29 @@ If we now make more changes and commit them, the `develop` branch will move forw
 % git commit -m "added text to test2.txt"
 [develop aac8ffc] added text to test2.txt
  1 file changed, 1 insertion(+)
+```
+
+```mermaid
+flowchart RL
+    1((9ab80b0))
+    2((d2d0f24))
+    3((370682a))
+    4((aac8ffc))
+    5((5d5cf50))
+    2 --> 1
+    3 --> 2
+    4 --> 3
+    5 --> 3
+    main(main) -.-> 5
+    develop(develop) -.-> 4
+    head(HEAD) -.-> develop
+    style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 4 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style 5 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
+    style main fill:#F8CECC,stroke:#EA6B66,stroke-width:1px
+    style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
 ```
 
 Now switch back to the `main` branch and make a change there.
@@ -217,6 +289,7 @@ flowchart RL
     5 --> 3
     main(main) -.-> 5
     develop(develop) -.-> 4
+    head(HEAD) -.-> main
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
@@ -261,6 +334,7 @@ flowchart RL
     6 --> 4
     main(main) -.-> 6
     develop(develop) -.-> 4
+    head(HEAD) -.-> main
     style 1 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 2 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
     style 3 fill:#D5E8D4,stroke:#67AB9F,stroke-width:1px
