@@ -59,6 +59,9 @@ GitHub also provides issues tracking. Issues can be used to report bugs, request
 
 ![ipt](images/ipt_issues.png)
 
+## Demo: contributing to the OBIS manual
+
+
 ## Authentication
 
 To be able to pull and push code from and to GitHub from your local machine, you need to authenticate yourself with GitHub. To do this, you will need to generate an SSH key pair, and upload the public key to GitHub. If you are working on the OBIS JupyterHub, the key pair will not be preserved across sessions, so you will need to store it in your work folder and configure git to use it.
@@ -89,5 +92,3 @@ GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone <repo-url>
 ```
 
 Then in the repository directory, run the `git config` command above.
-
-## Demo: contributing to the OBIS manual
