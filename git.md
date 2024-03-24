@@ -348,6 +348,20 @@ flowchart RL
     style develop fill:#E1D5E7,stroke:#A680B8,stroke-width:1px
 ```
 
+We can also visualize this with `git log --graph`:
+
+```bash
+% git log --graph --pretty=format:'%h <%an> %s%d'
+*   0fa2c35 <Pieter Provoost> merge branch develop (HEAD -> main, origin/main)
+|\
+| * aac8ffc <Pieter Provoost> added text to test2.txt (origin/develop, develop)
+* | 5d5cf50 <Pieter Provoost> changed the first file
+|/
+* 370682a <Pieter Provoost> added some text
+* d2d0f24 <Pieter Provoost> added one more file
+* 9ab80b0 <Pieter Provoost> first commit
+```
+
 ## Working with remotes
 
 A remote is a version of your repository that is hosted elsewhere, on the internet for example. By convention, the default remote is called `origin`. If you have a local repository, you can add a remote using `git remote add`. Note that the URL below is just an example.
@@ -371,14 +385,13 @@ To https://remote-repo-url.git
 branch 'main' set up to track 'origin/main'.
 ```
 
-Now do the same for the `develop` branch.
+To do this for all branches:
 
 ```bash
-% git push --set-upstream origin develop
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://remote-repo-url.git
- * [new branch]      develop -> develop
+% git push --set-upstream origin --all
 branch 'develop' set up to track 'origin/develop'.
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
 ```
 
 ```mermaid
