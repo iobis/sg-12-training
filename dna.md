@@ -29,7 +29,7 @@ See [Mapping (meta)barcoding data](https://docs.gbif.org/publishing-dna-derived-
 
 For OBIS we recommend that unclassified sequences are annotated as `scientificName` = `incertae sedis` and `scientificNameID` = `urn:lsid:marinespecies.org:taxname:12`.  This will ensure correct interpretation by both GBIF and OBIS.
 
-Additionally, it is recommended that sequence identifiers from the used reference databases (e.g. Barcode index numbers: BINs from BOLD) be added in the taxonConceptID field of the occurrence core table. In this way OBIS will retain its taxonomic backbone based on WoRMS, while enabling linking to disparate reference sequence databases. Names from reference databases which are not strictly scientific names, can be added as verbatimIdentification.
+Additionally, it is recommended that sequence identifiers from the used reference databases (e.g. Barcode index numbers: BINs from BOLD) be added in the `taxonConceptID` field of the occurrence core table. In this way OBIS will retain its taxonomic backbone based on WoRMS, while enabling linking to disparate reference sequence databases. Names from reference databases which are not strictly scientific names, can be added as verbatimIdentification.
 
 ## Examples
 ### eDNA/metabarcoding

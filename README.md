@@ -57,6 +57,5 @@ The example eDNA dataset is available at <https://github.com/iobis/sg-12-dataset
 
 - [Using git](git.md)
 - [Using GitHub](github.md)
-- [Using JupyterHub](jupyterhub.md)
-- [Processing an eDNA dataset](dataset.md)
 - [The DNADerivedData extension](dna.md)
+- [Processing an eDNA dataset](dataset.md)
