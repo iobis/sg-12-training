@@ -4,14 +4,20 @@ The [DNADerivedData extension](https://rs.gbif.org/extension/gbif/1.0/dna_derive
 
 Guidelines for using the extension and publishing DNA-derived data in general are available at [Publishing DNA-derived data through biodiversity data platforms](https://docs.gbif.org/publishing-dna-derived-data/en/). The guide handles metabarcoding and metagenomis, which are sequence derived, and qPCR/ddPCR data which are not sequence derived.
 
+## Dataset categories
+
+1. DNA derived occurrences
+2. Enriched occurrences
+3. Targeted species detection
+4. Name references (OTU/ASV/BIN)
+5. Metadata only 
+
+![](https://docs.gbif.org/publishing-dna-derived-data/img/web/ct/eDNA-categories.en.svg)
+From https://docs.gbif.org/publishing-dna-derived-data/en/
+
 ## Processing workflow
 
 ![](https://docs.gbif.org/publishing-dna-derived-data/img/web/outline-of-bioinformatic-processing.en.svg)
-From https://docs.gbif.org/publishing-dna-derived-data/en/
-
-## Dataset categories
-
-![](https://docs.gbif.org/publishing-dna-derived-data/img/web/ct/eDNA-categories.en.svg)
 From https://docs.gbif.org/publishing-dna-derived-data/en/
 
 ## Data mapping
@@ -25,4 +31,66 @@ For OBIS we recommend that unclassified sequences are annotated as `scientificNa
 
 Additionally, it is recommended that sequence identifiers from the used reference databases (e.g. Barcode index numbers: BINs from BOLD) be added in the taxonConceptID field of the occurrence core table. In this way OBIS will retain its taxonomic backbone based on WoRMS, while enabling linking to disparate reference sequence databases. Names from reference databases which are not strictly scientific names, can be added as verbatimIdentification.
 
-Examples: [TODO]
+## Examples
+### eDNA/metabarcoding
+#### Occurrence
+
+| Term | Example |
+|---|---|
+| basisOfRecord | MaterialSample |
+| organismQuantity | 120 |
+| organismQuantityType | DNA sequence reads |
+| sampleSizeValue | 1109573 |
+| sampleSizeUnit | DNA sequence reads |
+| associatedSequences | https://m.nih.gov/nuccore/MK405371 |
+| identificationRemarks | RDP annotation confidence (at lowest specified taxon): 0.96, against reference database: MIDORI. |
+| identificationReferences | https://github.com/terrimporter/CO1Classifier |
+| scientificName | Nitzschia |
+| verbatimIdentification | Nitzschia_sp._BOLD:AAO7110 |
+
+| Term | Example |
+|---|---|
+| verbatimIdentification | phototrophic eukaryote |
+| taxonConceptID | NCBI:txid1899546 |
+| scientificName | incertae sedis |
+| scientificNameID | urn:lsid:marinespecies.org:taxname:12 |
+
+#### DNADerivedData
+
+| Term | Example |
+|---|---|
+| DNA_sequence | TCTATCCTCAATTAT AGGTCATAATTCAC CATCAGTAGATTTAG GAATTTTCTCTATTC ATATTGCAGGTGTAT CATCAATTATAGGAT CAATTAATTTTATTG TAACAATTTTAAATA TACATACAAAAACT CATTCATTAAACTTT TTACCATTATTTTCA TGATCAGTTCTAGTT ACAGCAATTCTCCTT TTATTATCATTA |
+| target_gene | 16S rRNA |
+| target_subfragment | V6 |
+| pcr_primer_forward | GGACTACHVGGGTWTCTAAT |
+| pcr_primer_reverse | GGACTACHVGGGTW TCTAAT |
+| pcr_primer_name_forward | jgLCO1490 |
+| pcr_primer_name_reverse | jgHCO2198 |
+| seq_meth | Illumina HiSeq 1500 |
+| otu_class_appr | dada2; 1.14.0; ASV |
+| otu_db | MIDORI |
+| otu_seq_comp_appr | RDP classifier |
+
+### qPCR
+
+#### DNADerivedData
+
+| Term | Example |
+|---|---|
+| target_gene | 16S rRNA |
+| target_subfragment | V6 |
+| pcr_primer_forward | GGACTACHVGGGTWTCTAAT |
+| pcr_primer_reverse | GGACTACHVGGGTW TCTAAT |
+| pcr_primer_name_forward | jgLCO1490 |
+| pcr_primer_name_reverse | jgHCO2198 |
+| annealingTemp | 60 |
+| annealingTempUnit | degrees celsius |
+| pcr_cond | initial denaturation:94_3; annealing:50_1;elon gation:72_1.5;final elongation:72_10;35 |
+| probeReporter | FAM |
+| probeQuencher | NFQ-MGB |
+| thresholdQuantificationCycle | 0.3 |
+| baselineValue | 15 |
+| pcr_primer_lod | 51 |
+| pcr_primer_loq | 184 |
+| concentration | 67.5 |
+| concentrationUnit | ng/μl |

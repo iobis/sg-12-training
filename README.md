@@ -35,18 +35,18 @@ Monday 25 March 2024 (MABIK)
 | 11:00-11:30 | Hands-on session: JupyterHub and OBIS products platform | 0:30 |
 | 11:30-12:30 | Hands-on session: Git and GitHub | 1:00 |
 | 12:30-13:30 | Lunch | |
-| 13:30-14:30 | MeasurementOrFacts extension and vocabularies | 1:00 |
-| 14:30-15:00 | DNADerivedData extension | 0:30 |
+| 13:30-14:40 | MeasurementOrFacts extension and vocabularies | 1:10 |
+| 14:40-15:00 | DNADerivedData extension | 0:20 |
 | 15:00-15:30 | Break | |
-| 15:30-16:00 | Hands-on session: Example dataset | 0:30 |
+| 15:30-16:00 | Hands-on session: Downloading example dataset | 0:30 |
 
 Tuesday 26 March 2024 (MABIK)
 
 | Time | Topic | |
 | -- | -- | -- |
-| 09:00-10:30 | Hands-on sessions: quality control | 0:45 |
+| 09:00-10:30 | Hands-on session: quality control | 0:45 |
 | 10:30-11:00 | Break | |
-| 11:00-11:30 | Hands-on sessions: quality control (continued) | 0:30 |
+| 11:00-11:30 | Hands-on session: quality control (continued) | 0:30 |
 | 11:30-12:30 | OBIS annotated names tool (to be confirmed) | 1:00 |
 
 ## Example dataset
