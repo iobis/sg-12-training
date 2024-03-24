@@ -32,8 +32,8 @@ Monday 25 March 2024 (MABIK)
 | -- | -- | -- |
 | 10:00-10:45 | Darwin Core | 0:45 |
 | 10:45-11:00 | Break | |
-| 11:00-11:30 | Hands-on session: JupyterHub and OBIS products platform | 0:30 |
-| 11:30-12:30 | Hands-on session: Git and GitHub | 1:00 |
+| 11:00-11:45 | Hands-on session: JupyterHub and OBIS products platform | 0:45 |
+| 11:45-12:30 | Hands-on session: Git and GitHub | 0:45 |
 | 12:30-13:30 | Lunch | |
 | 13:30-14:40 | MeasurementOrFacts extension and vocabularies | 1:10 |
 | 14:40-15:00 | DNADerivedData extension | 0:20 |

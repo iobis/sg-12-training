@@ -82,13 +82,17 @@ This will print the public key to the terminal. Copy the key, go to GitHub, and 
 To configure git to use the key, run:
 
 ```bash
+git config --global core.sshCommand "ssh -i ~/work/id_rsa"
+```
+
+Or to configure it for a specific repository, run:
+
+```bash
 git config --local core.sshCommand "ssh -i ~/work/id_rsa"
 ```
 
-Note that this only works when you are in an existing git directory. To use the new key to clone a repository, you can run:
+Alternatively, specify `GIT_SSH_COMMAND` before a git command:
 
 ```bash
 GIT_SSH_COMMAND="ssh -i ~/work/id_rsa" git clone <repo-url>
 ```
-
-Then in the repository directory, run the `git config` command above.

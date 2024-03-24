@@ -1,5 +1,8 @@
 # Using git
 
+![](images/phd101212s.png)
+From <https://www.phdcomics.com>
+
 ## What is git?
 
 Git is a distributed version control system that is used to track changes in source code and other files during software development, making it a lot easier to collborate on a project with others. Git was created by Linus Torvalds to manage the development of the Linux operating system, but it has since become the de facto standard for version control in the software industry, and it is gaining traction in the scientific commmunity as well.

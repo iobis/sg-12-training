@@ -9,7 +9,7 @@ Guidelines for using the extension and publishing DNA-derived data in general ar
 1. DNA derived occurrences
 2. Enriched occurrences
 3. Targeted species detection
-4. Name references (OTU/ASV/BIN)
+4. Name references (OTUs/ASVs/BINs)
 5. Metadata only 
 
 ![](https://docs.gbif.org/publishing-dna-derived-data/img/web/ct/eDNA-categories.en.svg)
