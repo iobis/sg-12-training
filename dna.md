@@ -4,6 +4,8 @@ The [DNADerivedData extension](https://rs.gbif.org/extension/gbif/1.0/dna_derive
 
 Guidelines for using the extension and publishing DNA-derived data in general are available at [Publishing DNA-derived data through biodiversity data platforms](https://docs.gbif.org/publishing-dna-derived-data/en/). The guide handles metabarcoding and metagenomis, which are sequence derived, and qPCR/ddPCR data which are not sequence derived.
 
+![dna guide](images/dna_guide.png)
+
 ## Dataset categories
 
 1. DNA derived occurrences
