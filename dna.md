@@ -42,11 +42,13 @@ Additionally, it is recommended that sequence identifiers from the used referenc
 | organismQuantityType | DNA sequence reads |
 | sampleSizeValue | 1109573 |
 | sampleSizeUnit | DNA sequence reads |
-| associatedSequences | https://m.nih.gov/nuccore/MK405371 |
+| associatedSequences | https://www.ebi.ac.uk/ena/browser/view/ERR2752143 |
 | identificationRemarks | RDP annotation confidence (at lowest specified taxon): 0.96, against reference database: MIDORI. |
+| | Identification based on the RDP classifier at the confidence level 0.8: taxonomy Eukaryota;Chordata;Actinopteri;Albuliformes;Albulidae;Albula;Albula_glossodonta, confidences 1;1;1;1;1;1;0.92. Confirmation with VSEARCH against the 16S_ncbi_euk_1_50000_pga database at 0.97 similarity: hits KF681807,X99179,AY857934,NC_082992, identities 100,97.9,97.9,97.5, taxonomy Albula_glossodonta,Albula_vulpes,Albula_vulpes,Albula_vulpes, consensus Eukaryota;Chordata;Actinopteri;Albuliformes;Albulidae;Albula;Albula_vulpes. |
 | identificationReferences | https://github.com/terrimporter/CO1Classifier |
 | scientificName | Nitzschia |
 | verbatimIdentification | Nitzschia_sp._BOLD:AAO7110 |
+| taxonConceptID | BOLD:AAO7110 |
 
 | Term | Example |
 |---|---|
@@ -63,13 +65,13 @@ Additionally, it is recommended that sequence identifiers from the used referenc
 | target_gene | 16S rRNA |
 | target_subfragment | V6 |
 | pcr_primer_forward | GGACTACHVGGGTWTCTAAT |
-| pcr_primer_reverse | GGACTACHVGGGTW TCTAAT |
+| pcr_primer_reverse | GGACTACHVGGGTWTCTAAT |
 | pcr_primer_name_forward | jgLCO1490 |
 | pcr_primer_name_reverse | jgHCO2198 |
 | seq_meth | Illumina HiSeq 1500 |
 | otu_class_appr | dada2; 1.14.0; ASV |
-| otu_db | MIDORI |
-| otu_seq_comp_appr | RDP classifier |
+| otu_db | MIDORI Reference 2 |
+| otu_seq_comp_appr | RDP classifier 2.14 |
 
 ### qPCR
 
