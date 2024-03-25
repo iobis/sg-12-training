@@ -26,13 +26,24 @@ The dataset folder should now show up in the sidebar.
 
 ## Creating a notebook
 
-Close the terminal, navigate to `sg-12-dataset/scripts`, and create a new R notebook.
+Close the terminal, navigate to `sg-12-dataset/scripts`, and create a new R notebook at `sg-12-dataset/scripts/<yourname>.ipynb`.
 
 ## Processing the dataset
 
-An example solution is available at <https://github.com/pieterprovoost/sg-12-dataset/blob/develop/scripts/pieter.ipynb>. If necessary, download the notebook from GitHub and upload it to your scripts folder.
+An example solution is available at <https://github.com/pieterprovoost/sg-12-dataset/blob/develop/scripts/pieter.ipynb>. If necessary, download the notebook from GitHub and upload it to your scripts folder, or copy it from the scratch folder to your scripts folder.
 
-To generate a Darwin Core Archive from Darwin Core data frames, you can use the <https://github.com/pieterprovoost/r-dwca-writer> package.
+### What to try
+
+- Determine which core and extension tables you will need.
+- Combine the ASV table, the taxonomy table, and the sample metadata into a Darwin Core occurrence table. Keep in kind that any ASV can occur in multiple samples.
+- Use the `obistools` package for taxon matching. Optionally fix some of the non matching names manually.
+- Use the `obistools` package for checking coordinates.
+- Use the `obistools` package for checking dates.
+- Use the `obistools` package to check for missing fields.
+- Create an ExtendedMeasurementOrFact table. Possible measurements are sequence reads, sample size, and DNA concentration. Note that not all of these have terms in the NERC vocabulary server.
+- Create a DNADerivedData table. Some of the information can be found in the metadata file.
+- Write the individual tables to the `dwc/<yourname>` directory.
+- To generate a Darwin Core Archive from Darwin Core data frames, you can use the <https://github.com/pieterprovoost/r-dwca-writer> package.
 
 ## Pushing your work to GitHub
 
