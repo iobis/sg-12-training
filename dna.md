@@ -48,8 +48,8 @@ Additionally, it is recommended that sequence identifiers from the used referenc
 | identificationRemarks | RDP annotation confidence (at lowest specified taxon): 0.96, against reference database: MIDORI. |
 | | Identification based on the RDP classifier at the confidence level 0.8: taxonomy Eukaryota;Chordata;Actinopteri;Albuliformes;Albulidae;Albula;Albula_glossodonta, confidences 1;1;1;1;1;1;0.92. Confirmation with VSEARCH against the 16S_ncbi_euk_1_50000_pga database at 0.97 similarity: hits KF681807,X99179,AY857934,NC_082992, identities 100,97.9,97.9,97.5, taxonomy Albula_glossodonta,Albula_vulpes,Albula_vulpes,Albula_vulpes, consensus Eukaryota;Chordata;Actinopteri;Albuliformes;Albulidae;Albula;Albula_vulpes. |
 | identificationReferences | https://github.com/terrimporter/CO1Classifier |
-| scientificName | Nitzschia |
 | verbatimIdentification | Nitzschia_sp._BOLD:AAO7110 |
+| scientificName | Nitzschia |
 | taxonConceptID | BOLD:AAO7110 |
 
 | Term | Example |
